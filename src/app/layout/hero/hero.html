@@ -1,0 +1,37 @@
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-card">
+      <h1 class="hero-name">{{ personalInfo?.name }}</h1>
+      <h2 class="hero-title">{{ personalInfo?.title }}</h2>
+      <p class="hero-tagline">{{ personalInfo?.tagline }}</p>
+      <div class="hero-meta">
+        <p class="hero-meta-item">
+          <ng-icon name="heroMapPin"></ng-icon>
+          {{ personalInfo?.location }}
+        </p>
+        <p class="hero-meta-item">
+          <ng-icon name="heroEnvelope"></ng-icon>{{ personalInfo?.email }}
+        </p>
+        <p class="hero-meta-item">
+          <ng-icon name="heroPhoneArrowUpRight"></ng-icon>{{ personalInfo?.phone }}
+        </p>
+        <div class="hero-socials">
+          <a
+            class="hero-linkedin"
+            href="https://{{ personalInfo?.linkedin }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><ng-icon name="bootstrapLinkedin"></ng-icon
+          ></a>
+          <a
+            class="hero-github"
+            href="https://{{ personalInfo?.github }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><ng-icon name="bootstrapGithub"></ng-icon
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
