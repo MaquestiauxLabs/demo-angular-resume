@@ -1,0 +1,38 @@
+<div class="experience-item" *ngIf="experience">
+  <div class="experience-item-header">
+    <div class="experience-item-logo">
+      {{ companyInitials }}
+    </div>
+    <div>
+      <div class="experience-item-position">{{ experience.position }}</div>
+      <div class="experience-item-company">{{ experience.company }}</div>
+    </div>
+    <div>
+      <div class="experience-item-duration">{{ experience.duration }}</div>
+      <div class="experience-item-location">
+        <ng-icon name="heroMapSolid" class="text-blue-500"></ng-icon>
+        {{ experience.location }}
+      </div>
+    </div>
+  </div>
+  <div class="experience-item-responsibilities-list">
+    <div
+      class="experience-item-responsibility"
+      *ngFor="let responsibility of experience.responsibilities; let i = index"
+    >
+      <div class="experience-item-responsibility-bullet"></div>
+      {{ responsibility }}
+    </div>
+  </div>
+  <div class="experience-item-technologies">
+    <div class="experience-item-technology-title">Technologies:</div>
+    <div class="experience-item-technology-list">
+      <div
+        class="experience-item-technology"
+        *ngFor="let technology of experience.technologies; let i = index"
+      >
+        {{ technology }}
+      </div>
+    </div>
+  </div>
+</div>
