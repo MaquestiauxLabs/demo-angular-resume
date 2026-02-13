@@ -52,7 +52,7 @@
     position: relative;
     overflow: hidden;
     .hero-content {
-      @apply relative z-10 py-4 px-6;
+      @apply relative z-10 py-4 px-6 w-full;
       .hero-card {
         @apply text-center p-8 bg-primary-50 shadow-lg text-4xl font-bold mb-4 leading-tight;
         filter: drop-shadow(0 10px 8px var(--shadow-light)) drop-shadow(0 4px 3px var(--shadow));
@@ -92,7 +92,7 @@
     position: relative;
     overflow: hidden;
     .footer-content {
-      @apply relative z-10 py-4 px-6;
+      @apply relative z-10 py-4 px-6 w-full;
       .footer-card {
         @apply text-center p-8 bg-primary-50 shadow-lg text-gray-700 rounded-lg;
         filter: drop-shadow(0 10px 8px var(--shadow-light)) drop-shadow(0 4px 3px var(--shadow));
