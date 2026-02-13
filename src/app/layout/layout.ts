@@ -3,10 +3,11 @@ import { Hero } from './hero/hero';
 
 import { personalInfo } from '@data';
 import { PersonalInfo } from '@shared/models';
+import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-layout',
-  imports: [Hero],
+  imports: [Hero, Footer],
   templateUrl: './layout.html',
 })
 export class Layout {
