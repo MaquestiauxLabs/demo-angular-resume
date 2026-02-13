@@ -1,0 +1,20 @@
+<div class="language-item" *ngIf="language">
+  <div class="language-item-top-row">
+    <div class="language-item-flag">{{ getLanguageFlag(language.isocode) }}</div>
+    <div class="language-item-name">{{ language.name }}</div>
+    <div class="language-item-level">{{ language.level }}</div>
+  </div>
+  <div class="language-item-proficiency">
+    @for (level of languageLevels; track level; let i = $index) {
+      <div
+        [attr.title]="level"
+        [class.active]="i <= activeIndex"
+        [class.inactive]="i > activeIndex"
+        class="language-item-proficiency-bar"
+      ></div>
+    }
+  </div>
+  <div class="language-item-mother-tongue">
+    {{ language.motherTongue ? 'Mother Tongue' : '' }}
+  </div>
+</div>
