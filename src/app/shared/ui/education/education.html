@@ -1,0 +1,33 @@
+<div class="education-item">
+  <div class="education-item-header">
+    <div class="education-item-logo">
+      <ng-icon name="heroAcademicCapSolid" fill="text-amber-500"></ng-icon>
+    </div>
+    <div>
+      <div class="education-item-degree">{{ education?.degree }}</div>
+      <div class="education-item-institution">{{ education?.institution }}</div>
+    </div>
+    <div>
+      <div class="education-item-duration">{{ education?.duration }}</div>
+      <div class="education-item-location">
+        <ng-icon name="heroMapSolid" class="text-blue-500"></ng-icon>
+        {{ education?.location }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="education?.achievements?.length">
+    <div class="education-item-achievements">
+      <div class="education-item-achievements-title">Key Achievements:</div>
+      <div class="education-item-achievements-list">
+        <div
+          *ngFor="let achievement of education?.achievements; let i = index"
+          class="education-item-achievements"
+          [attr.data-key]="i"
+        >
+          <div class="education-item-achievements-bullet"></div>
+          {{ achievement }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
