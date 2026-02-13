@@ -1,0 +1,11 @@
+<div class="skill-item" *ngIf="skill">
+  <div class="skill-name">{{ skill.name }}</div>
+  <div class="skill-stars">
+    <div
+      *ngFor="let i of [].constructor(getSkillLevel(skill.level))"
+      class="skill-level-{{ getSkillLevel(skill.level) }}"
+    >
+      <ng-icon name="heroStarSolid" fill="text-amber-500"></ng-icon>
+    </div>
+  </div>
+</div>

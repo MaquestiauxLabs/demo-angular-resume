@@ -1,0 +1,9 @@
+<div class="skills">
+  <div class="skills-header">Skills</div>
+  <div *ngFor="let category of skills" class="skill-category">
+    <div class="skill-category-name">{{ category.category }}</div>
+    <div class="skills-list">
+      <app-skill *ngFor="let skill of category.skills" [skill]="skill"></app-skill>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-export interface PersonalInfo {
+export interface PersonalInfoModel {
   name: string;
   title: string;
   location: string;

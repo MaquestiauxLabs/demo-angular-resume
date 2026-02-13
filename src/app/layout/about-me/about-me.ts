@@ -1,4 +1,4 @@
-import { PersonalInfo } from '@/app/shared/models/personal-info';
+import { PersonalInfoModel } from '@/app/shared/models/personal-info';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styles: ``,
 })
 export class AboutMe {
-  @Input() personalInfo: PersonalInfo | null = null;
+  @Input() personalInfo: PersonalInfoModel | null = null;
 }

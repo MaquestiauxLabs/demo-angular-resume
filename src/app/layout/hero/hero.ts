@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroEnvelope, heroMapPin, heroPhoneArrowUpRight } from '@ng-icons/heroicons/outline';
-import { PersonalInfo } from '../../shared/models';
+import { PersonalInfoModel } from '../../shared/models';
 
 @Component({
   selector: 'app-hero',
@@ -19,5 +19,5 @@ import { PersonalInfo } from '../../shared/models';
   ],
 })
 export class Hero {
-  @Input() personalInfo: PersonalInfo | null = null;
+  @Input() personalInfo: PersonalInfoModel | null = null;
 }
