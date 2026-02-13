@@ -1,0 +1,14 @@
+<div key="{training.name}" class="training-item" *ngIf="training">
+  <div class="training-name">
+    <ng-icon name="heroAcademicCapSolid" fill="text-amber-500"></ng-icon>{{ training.name }}
+  </div>
+  <div class="training-meta">
+    <div class="training-issuer">
+      <ng-icon name="heroBuildingOfficeSolid" fill="text-amber-500"></ng-icon>{{ training.issuer }}
+    </div>
+    <div class="training-date">
+      <ng-icon name="heroCalendarSolid" fill="text-amber-500"></ng-icon>{{ training.date }}
+    </div>
+  </div>
+  <div class="training-description">{{ training.description }}</div>
+</div>
