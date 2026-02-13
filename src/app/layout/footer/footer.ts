@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PersonalInfo } from '../../shared/models';
+import { PersonalInfoModel } from '../../shared/models';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +8,6 @@ import { PersonalInfo } from '../../shared/models';
   styles: ``,
 })
 export class Footer {
-  @Input() personalInfo: PersonalInfo | null = null;
+  @Input() personalInfo: PersonalInfoModel | null = null;
   public currentYear: number = new Date().getFullYear();
 }

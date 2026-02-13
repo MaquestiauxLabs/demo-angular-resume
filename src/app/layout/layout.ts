@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { Hero } from './hero/hero';
 
-import { personalInfo } from '@data';
-import { PersonalInfo } from '@shared/models';
+import { personalInfo, skills } from '@data';
+import { PersonalInfoModel, SkillCategoryModel } from '@shared/models';
 import { AboutMe } from './about-me/about-me';
 import { Footer } from './footer/footer';
+import { Skills } from './skills/skills';
 
 @Component({
   selector: 'app-layout',
-  imports: [Hero, Footer, AboutMe],
+  imports: [Hero, Footer, AboutMe, Skills],
   templateUrl: './layout.html',
 })
 export class Layout {
-  readonly personalInfo: PersonalInfo = personalInfo;
+  readonly personalInfo: PersonalInfoModel = personalInfo as PersonalInfoModel;
+  readonly skills: SkillCategoryModel[] = skills as SkillCategoryModel[];
 }
